@@ -22,6 +22,7 @@ public class setupMongoConnection {
         //MongoDatabase db = mongo_client.listDatabaseNames();
         MongoIterable<String> a=mongo_client.listDatabaseNames();
         System.out.println(a.iterator().next());
+        //connecting to mojo
         MongoDatabase database = mongo_client.getDatabase("mojo");
 
         System.out.println(database.listCollections().first());
